@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+string sub(string a, string b)	//tru hai so nguyen duong
+{
+	while(a.size()<b.size()) a = "0" + a;	
+	while(a.size()>b.size()) b = "0" + b;
+	
+	bool ktra = false;
+	if(a<b)
+	{
+		a.swap(b);	//hoan doi a va b => a>b
+		ktra = true;
+	}
+	
+	int mem = 0;
+	string num = "";
+	int len = a.size()-1;
+	for(int i = len; i >= 0; i--)
+	{
+		int so = int(a[i]-'0') - int(b[i]-'0') - mem;
+		if(so < 0)
+		{
+			num = char(so + 10 + '0') + num;
+			mem = 1;
+		}
+		else
+		{
+			num = char(so + '0') + num;
+			mem = 0;
+		}
+	}
+//	while (num[0] == '0') num.erase(num.begin());
+	if(ktra == true) num = "-" + num;
+	return num;
+}
+int main()
+{
+		string a, b;
+		cin >> a >> b;
+		cout << sub(a,b) ;
+}
+	
+
