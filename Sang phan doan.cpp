@@ -3,22 +3,6 @@
 using namespace std;
 
 
-////bool prime[] = {false} ;
-//int sieve_Eratosthenes(int n, int t)
-//{
-//	bool prime[n+1] = {false};
-//	for(int i = t; i <= sqrt(n); i++)
-//	{
-//		if(!prime[i])
-//		{
-//			for(int j = i*i; j <= n; j+=i)
-//				prime[j] = true;
-//		}	
-//	}
-////	for(int i = t; i <= n; i++)
-////		return (prime[i] == false);
-//}
-
 int Eratosthenes_PhanDoan(int n, int delta)
 {
 	bool prime[n] = {false};
