@@ -24,7 +24,7 @@ bool Miller_Rabin(int n, int t)
 	int a, r, y, s;
 	int mark = n-1;
 	s = 0;
-	// phan tich n-1 = s^s.n
+	// phan tich n-1 = 2^s.r
 	while(mark%2 == 0)
 	{
 		s++;
