@@ -12,7 +12,7 @@ int Eratosthenes_PhanDoan(int n, int delta)
 		{
 			for(int p = 2; p <= sqrt(i+delta-1); p++)
 			{
-				if(j%p == 0)
+				if(j%p == 0 && j != p)
 					prime[j] = true;
 				if(prime[j] == true) break;
 			}
