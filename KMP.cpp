@@ -77,14 +77,3 @@ int main()
 	KMP_search(T, P);
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
