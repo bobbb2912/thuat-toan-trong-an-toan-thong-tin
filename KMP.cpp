@@ -19,7 +19,7 @@ void computeLPSArray(string P, int m, int lps[]) // longest proper suffix
 		else
 		{
 			if(len != 0)
-				len = lps[i-1];
+				len = lps[len-1];
 			else
 			{
 				lps[i] = 0;
